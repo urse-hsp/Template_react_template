@@ -1,0 +1,32 @@
+@import '@/styles/theme.scss';
+@import '@/Layout/index.scss';
+
+.root-header {
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 1px solid $colorBorder; //#E7E7E7;
+  height: 100px;
+  padding: 0 10px;
+  background-color: $colorBgBase;
+  position: relative;
+  &-main {
+    @include appLayoutWrap();
+    height: 100px;
+    position: relative;
+    transition: top 0.2s ease 0s;
+    z-index: 20;
+  }
+  &-logo {
+    width: 42px;
+    height: 42px;
+    margin-right: 20px !important;
+  }
+  &-search {
+    max-width: 400px;
+    flex: 1;
+
+    @media screen and (min-width: 1407px) {
+      margin-left: 52px;
+    }
+  }
+}

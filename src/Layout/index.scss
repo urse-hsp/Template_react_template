@@ -1,0 +1,31 @@
+@import '@/styles/media.scss';
+
+@mixin appLayoutWrap($numRow: 100%) {
+  max-width: 1378px;
+  margin: auto;
+}
+@mixin pageWrap($numRow: 100%) {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+// 布局结构
+.app-main {
+  @include appLayoutWrap();
+  position: relative;
+  padding: 40px 0;
+  @media screen and (max-width: $xl) {
+    padding: 30px 14px;
+  }
+  @media screen and (max-width: $min) {
+    padding: 15px 8px;
+  }
+  & > div {
+    @include pageWrap();
+  }
+}
+
+// 页面外套
+.pageWrap {
+  @include pageWrap();
+}

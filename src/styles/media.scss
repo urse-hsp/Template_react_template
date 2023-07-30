@@ -1,0 +1,48 @@
+:root {
+  font-size: 16px;
+}
+$min: 370px;
+$xs: 480px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1600px;
+// xs	屏幕 < 576px 响应式栅格，可为栅格数或一个包含其他属性的对象
+// sm	屏幕 ≥ 576px 响应式栅格，可为栅格数或一个包含其他属性的对象
+// md	屏幕 ≥ 768px 响应式栅格，可为栅格数或一个包含其他属性的对象
+// lg	屏幕 ≥ 992px 响应式栅格，可为栅格数或一个包含其他属性的对象
+// xl	屏幕 ≥ 1200px 响应式栅格，可为栅格数或一个包含其他属性的对象
+// xxl	屏幕 ≥ 1600px 响应式栅格，可为栅格数或一个包含其他属性的对象
+
+@media screen and (max-width: $sm) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width: $sm) and (max-width: $md) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: $md) and (max-width: $lg) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: $lg) and (max-width: $xl) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+// 宫格布局
+@mixin line-height() {
+  line-height: 23.4px;
+  @media screen and (max-width: $lg) {
+    /* prettier-ignore */
+    line-height: 17PX;
+  }
+}
