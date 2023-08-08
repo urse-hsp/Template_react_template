@@ -13,7 +13,7 @@
   1. 所有设置转换的单位都会被转换掉，无法设置某些样式的单位不被转换。
 
 
-# web3/web2 前端项目开发
+# web3模板/web2模板
   - web2项目删掉 一下web3依赖
   - @infte/web3modal-react 插件
   - models/appHashState文件
