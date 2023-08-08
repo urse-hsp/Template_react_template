@@ -47,7 +47,7 @@ function Modal({
         <div className={styles['modal-header']}>
           <h3 className={styles['modal-title']}>{title}</h3>
           <span className={styles['modal-close']} onClick={onClose}>
-            <CloseOutlined rev={{}} />
+            <CloseOutlined />
           </span>
         </div>
         <div className={styles['modal-body']}>

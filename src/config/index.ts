@@ -65,15 +65,16 @@ const config: BaseConfigType = {
   precision: 2,
   WEBSITE: 'Next',
   pageSize: 5,
-  SOCIAL_CONTRACTS_KEY,
 
-  // 钱包
+  /**
+   * @deprecated web3Modal
+   */
   BASE_NETWORK_ID: CHAIN_ID,
   BASE_WALLET_TYPE: 'MetaMask',
   chainsList, // 支持链
   LOCATION_ID,
 
-  // 主网
-  CHAIN_ID,
+  CHAIN_ID, // 主网
+  SOCIAL_CONTRACTS_KEY,
 };
 export default config;

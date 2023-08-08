@@ -56,7 +56,7 @@ const Language: React.FC<LanguageProps> = (props) => {
     >
       <Space>
         {showName && <strong>{language?.label}</strong>}
-        <GlobalOutlined style={{ fontSize: '26px' }} className="cursor" rev={{}}/>
+        <GlobalOutlined style={{ fontSize: '26px' }} className="cursor" />
       </Space>
     </Dropdown>
   );

@@ -15,19 +15,9 @@ const Layout: React.FC = () => {
         <FloatButton.Group
           style={{ right: '5%' }}
           // trigger="hover"
-          icon={<QuestionCircleOutlined rev={{}} />}
+          icon={<QuestionCircleOutlined />}
           type="primary"
         >
-          {/* <FloatButton
-            icon={
-              <SyncOutlined
-                rev={{}}
-                onClick={() => {
-                  window.location.reload();
-                }}
-              />
-            }
-          /> */}
           <FloatButton.BackTop visibilityHeight={1000} />
         </FloatButton.Group>
       </main>

@@ -1,8 +1,8 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import { useRoutes, type RouteObject, useNavigate } from 'react-router-dom';
-// import { LoadingElement } from '@/components/loading';
 import Layout from '@/Layout';
 import AppPage from '@/styles/app';
+import { LoadingElementWrapper } from '@/components/loading';
 
 const Home = lazy(
   async () => await import(/* webpackChunkName: "home" */ '@/pages/home'),
@@ -47,8 +47,7 @@ const routeConfig: RouteObject[] = [
 const AppRouter = () => {
   const element = useRoutes(routeConfig);
   return (
-    // fallback={LoadingElement}
-    <Suspense>
+    <Suspense fallback={LoadingElementWrapper}>
       <AppPage>{element}</AppPage>
     </Suspense>
   );

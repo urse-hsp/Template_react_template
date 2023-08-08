@@ -25,6 +25,18 @@ export const LoadingElement = React.createElement(
   React.createElement('div', { className: 'my-loading-text' }, 'Loading'),
 );
 
+/* loading组件的 React.Element */
+export const LoadingElementWrapper = React.createElement(
+  'div',
+  { id: 'loader-wrapper' },
+  <>
+    <div id="loader"></div>
+    <div className="loader-section section-left"></div>
+    <div className="loader-section section-right"></div>
+    <div className="load_title">正在加载，请耐心等待</div>
+  </>,
+);
+
 export function Loader({
   size = '20px',
   stroke,

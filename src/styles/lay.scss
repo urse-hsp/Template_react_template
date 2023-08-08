@@ -1,3 +1,8 @@
+/*
+  * 布局类
+*/
+@import './media.scss';
+
 .flex {
   display: flex;
 }
@@ -118,4 +123,13 @@
   -moz-user-select: text; /*火狐*/
   -ms-user-select: text; /*IE10*/
   user-select: text;
+}
+
+// 宫格布局
+@mixin line-height() {
+  line-height: 23.4px;
+  @media screen and (max-width: $lg) {
+    /* prettier-ignore */
+    line-height: 17PX;
+  }
 }

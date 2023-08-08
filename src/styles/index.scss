@@ -9,8 +9,10 @@
 html {
   // transition: width 1s;
 
-  /*定义滚动条高宽及背景
- 高宽分别对应横竖滚动条的尺寸*/
+  /*
+  * 定义滚动条高宽及背景
+  * 高宽分别对应横竖滚动条的尺寸
+  */
   ::-webkit-scrollbar {
     width: 11px;
     /* prettier-ignore */
@@ -36,7 +38,6 @@ html {
   // app最小视图
   /* prettier-ignore */
   min-width: 300PX;
-
   -webkit-user-select: none; /*webkit浏览器*/
   -moz-user-select: none; /*火狐*/
   -ms-user-select: none; /*IE10*/
