@@ -16,6 +16,7 @@ export default defineConfig(({ command, mode }) => {
       alias: {
         '@': resolve('./src'),
         '@package': resolve('./package.json'),
+        '~@': resolve('./src'),
       },
     },
     define: {
