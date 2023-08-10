@@ -1,13 +1,9 @@
-import React, { memo, useState, useEffect } from 'react';
-import { Avatar, Grid, Input, message } from 'antd';
-import { useTranslation } from 'react-i18next';
-import { useNavigate, useSearchParams, useLocation } from 'react-router-dom';
+import React, { memo } from 'react';
+import { Avatar } from 'antd';
+import { useNavigate } from 'react-router-dom';
 import logo_img from '@/assets/images/logo/logo.png';
-import { JudgmentBytes } from '@/utils';
+import { Web3Button } from '@infte/web3modal-react';
 import './index.scss';
-
-const { Search } = Input;
-const { useBreakpoint } = Grid;
 
 interface HeaderProps {
   isVisible?: boolean;
@@ -27,7 +23,6 @@ const Leftview = memo(() => {
           navigate('/');
         }}
       />
-
     </div>
   );
 });
@@ -38,7 +33,9 @@ const HeaderView: React.FC<HeaderProps> = () => {
       <div className="root-header-main flex-between">
         <Leftview />
         &nbsp;
-        <div>right</div>
+        <div>
+          <Web3Button />
+        </div>
       </div>
     </nav>
   );

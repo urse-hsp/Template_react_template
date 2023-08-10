@@ -22,6 +22,7 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    '@typescript-eslint/prefer-nullish-coalescing': 0,
     'array-callback-return': 0,
     'no-case-declarations': 0,
     '@typescript-eslint/restrict-plus-operands': 0,

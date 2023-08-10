@@ -1,14 +1,13 @@
 import chains from './network.chains_support.json';
 import { type localesType } from '@/locales';
 import { type chainsType } from '@infte/web3modal-react/dist/config';
-// import VConsole from 'vconsole';
-const { version } = require('@package');
+import packages from '../../package.json';
 
-const env = process.env.REACT_APP_ENV;
-if (env !== 'production') {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  // const vConsole = new VConsole();
-}
+const { version } = packages;
+const VITE_ENV = process.env?.REACT_APP_ENV_VITE; // VITE环境类型变量
+const env = VITE_ENV ?? process.env?.REACT_APP_ENV;
+
+console.warn(`当前打包工具${VITE_ENV ? 'vite' : 'webpack'}: ${env}`);
 
 /**
  * @description 系统全局配置 统一调用接入【默认正式环境配置】

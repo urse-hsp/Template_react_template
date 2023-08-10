@@ -7,10 +7,10 @@ import ModelsState from '@/models';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import dayjs from 'dayjs';
 import '@/styles/index.scss';
-import '@/locales';
 
-require('dayjs/locale/zh-cn');
-require('dayjs/locale/zh-hk');
+import '@/locales';
+import 'dayjs/locale/zh-cn';
+import 'dayjs/locale/zh-hk';
 dayjs.extend(relativeTime);
 
 const root = ReactDOM.createRoot(

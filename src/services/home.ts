@@ -1,4 +1,4 @@
-import { useGetRequest, useTriggerRequest } from '@/hooks/useRequest';
+import { useTriggerRequest } from '@/hooks/useRequest';
 import apiList from '@/utils/apiList';
 
 export const useHomeTopicsNewest = () => {
