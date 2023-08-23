@@ -41,6 +41,10 @@ export default defineConfig(({ command, mode }) => {
           : {},
       },
     },
+    // 配置前端服务地址和端口
+    server: {
+      port: 3000,
+    },
     // esbuild: {
     //   pure: ['console.log'], // 删除 console.log
     //   drop: ['debugger'], // 删除 debugger

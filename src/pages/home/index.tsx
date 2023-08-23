@@ -7,6 +7,6 @@ interface IndexType {
 }
 
 const Index: React.FC<IndexType> = (props) => {
-  return <div className="home">home</div>;
+  return <div className="home">home1123</div>;
 };
 export default Index;

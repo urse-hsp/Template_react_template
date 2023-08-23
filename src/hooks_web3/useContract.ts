@@ -1,61 +1,25 @@
-import { useWeb3Provider, getContract } from './index';
-import { useMemo } from 'react';
+// import { useWeb3Provider } from './index';
 import { type ethers } from '@infte/web3-utils';
+import {
+  // useContract,
+  useErcContract,
+  useTokenContract,
+} from '@infte/web3modal-react';
 
-import ERC20_ABI from '@/constants/abis/erc20.json';
-import Social_ABI from '@/constants/abis/SocialX.json';
+// import Social_ABI from '@/constants/abis/SocialX.json';
 
-import config from '@/config';
+// import config from '@/config';
+export type Contract = ethers.Contract;
 
-type Contract = ethers.Contract;
-// TODO: 合约
-export function useContract(
-  address: string | undefined,
-  ABI: any,
-  withSignerIfPossible?: boolean, // 签名
-): Contract | null {
-  const { web3Provider: provider, account } = useWeb3Provider();
+export { useErcContract, useTokenContract };
 
-  return useMemo(() => {
-    if (!address || !ABI || !provider) return null;
-    try {
-      return getContract(
-        address,
-        ABI,
-        provider,
-        withSignerIfPossible && account ? account : undefined,
-      );
-    } catch (error) {
-      console.error('Failed to get contract', error);
-      return null;
-    }
-  }, [address, ABI, provider, withSignerIfPossible, account]);
-}
-
-// erc20合约
-export const useErcContract = () => {
-  const { web3Provider: provider, account } = useWeb3Provider();
-  return (address: string) => {
-    if (!address || !provider || !account) return null;
-    return getContract(address, ERC20_ABI, provider, account);
-  };
-};
-
-// TODO: erc20用户合约（用户查询token合约。）
-export function useTokenContract(
-  tokenAddress?: string,
-  withSignerIfPossible?: boolean,
-): Contract | null {
-  return useContract(tokenAddress, ERC20_ABI, withSignerIfPossible);
-}
-
-// get Social
-export function useSocialContract(): Contract | null {
-  const { contracts } = useWeb3Provider();
-  const contractsData: any = contracts;
-  return useContract(
-    contractsData?.[config.SOCIAL_CONTRACTS_KEY],
-    Social_ABI,
-    true,
-  );
-}
+// // get Social
+// export function useSocialContract(): Contract | null {
+//   const { contracts } = useWeb3Provider();
+//   const contractsData: any = contracts;
+//   return useContract(
+//     contractsData?.[config.SOCIAL_CONTRACTS_KEY],
+//     Social_ABI,
+//     true,
+//   );
+// }
