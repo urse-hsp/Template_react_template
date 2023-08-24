@@ -5,13 +5,14 @@
   overflow: hidden;
   width: 100%;
   border-bottom: 1px solid $colorBorder; //#E7E7E7;
-  height: 100px;
   padding: 0 10px;
   background-color: $colorBgBase;
   position: relative;
+  height: 100px;
+
   &-main {
+    height: 100%;
     @include appLayoutWrap();
-    height: 100px;
     position: relative;
     transition: top 0.2s ease 0s;
     z-index: 20;
@@ -19,7 +20,7 @@
   &-logo {
     width: 42px;
     height: 42px;
-    margin-right: 20px !important;
+    margin-right: 10px !important;
   }
   &-search {
     max-width: 400px;

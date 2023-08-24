@@ -1,6 +1,7 @@
 @import '@/styles/media.scss';
 
 @mixin appLayoutWrap($numRow: 100%) {
+  width: 100%;
   max-width: 1378px;
   margin: auto;
 }
