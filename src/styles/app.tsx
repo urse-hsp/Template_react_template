@@ -34,7 +34,7 @@ const App: React.FC<AppPageType> = (props) => {
   // colorBgElevated// 盒子容器背景
   // colorBgBase // 背景颜色
   useLayoutEffect(() => {
-    const r: any = document.querySelector(':root');
+    const r: any = document.documentElement; // document.querySelector(':root');
     r.style.backgroundColor = token.colorBgBase; // 背景色
     r.style.color = token.colorTextBase; // 文字色
     r.style.setProperty('--colorBgLayout', token.colorBgLayout); // 页面布局色

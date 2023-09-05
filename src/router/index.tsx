@@ -2,7 +2,7 @@ import React, { lazy, Suspense, useEffect } from 'react';
 import { useRoutes, type RouteObject, useNavigate } from 'react-router-dom';
 import Layout from '@/Layout';
 import AppPage from '@/styles/app';
-import { LoadingElementWrapper } from '@/components/loading';
+import { LoadingElementWrapper } from '@/components';
 
 const Home = lazy(
   async () => await import(/* webpackChunkName: "home" */ '@/pages/home'),
