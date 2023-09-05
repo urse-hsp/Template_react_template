@@ -32,7 +32,7 @@ const Index: React.FC<IndexType> = (props) => {
         },
       }}
     >
-      <Router />;
+      <Router />
     </ThemeConfigProvider>
   );
 };
