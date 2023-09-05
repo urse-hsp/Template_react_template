@@ -4,8 +4,16 @@ import {
   LoadingElement,
   LoadingElementWrapper,
   Modal,
+  ThemeConfigProvider,
 } from '@infte/components';
 
-export { default as ThemeSwitch } from './ThemeSwitch';
-
-export { Loading, Loader, LoadingElement, LoadingElementWrapper, Modal };
+// export { default as IconFont } from './IconFont';
+const { ThemeSwitch } = ThemeConfigProvider;
+export {
+  Loading,
+  Loader,
+  LoadingElement,
+  LoadingElementWrapper,
+  Modal,
+  ThemeSwitch,
+};

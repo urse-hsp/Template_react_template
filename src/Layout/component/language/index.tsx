@@ -4,7 +4,7 @@ import { Dropdown, Space } from 'antd';
 import { resources, type localesType } from '@/locales';
 import { useTranslation } from 'react-i18next';
 import dayjs from 'dayjs';
-import { themeColor } from '@/styles/app';
+import { themeColor } from '@/pages/app';
 import { GlobalOutlined } from '@ant-design/icons';
 
 // : MenuProps['items']

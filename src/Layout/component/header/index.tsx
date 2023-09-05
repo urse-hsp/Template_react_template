@@ -1,8 +1,9 @@
 import React, { memo } from 'react';
-import { Avatar } from 'antd';
+import { Avatar, Space } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import logo_img from '@/assets/images/logo/logo.png';
 import { Web3Button } from '@infte/web3modal-react';
+import { ThemeSwitch } from '@/components';
 import './index.scss';
 
 interface HeaderProps {
@@ -33,9 +34,10 @@ const HeaderView: React.FC<HeaderProps> = () => {
       <div className="root-header-main flex-between">
         <Leftview />
         &nbsp;
-        <div>
+        <Space>
+          <ThemeSwitch />
           <Web3Button />
-        </div>
+        </Space>
       </div>
     </nav>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom'; // BrowserRouter,
-import App from '@/router';
+import App from '@/pages/app';
 import reportWebVitals from '@/utils/reportWebVitals';
 import ModelsState from '@/models';
 import relativeTime from 'dayjs/plugin/relativeTime';

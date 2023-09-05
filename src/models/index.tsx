@@ -1,5 +1,5 @@
 import React from 'react';
-import utils from './utils';
+import appUserConfigState from './appUserConfigState';
 
 import { Web3Modal } from '@infte/web3modal-react';
 import config from '@/config';
@@ -8,9 +8,7 @@ import { type localesType } from '@/locales';
 const baseLocale: localesType = config.BaseLocale;
 
 // 注意排序
-const models = {
-  utils,
-};
+const models = { appUserConfigState };
 const modelsData = Object.values(models);
 
 function Web3ReactProvider({ children }: any) {

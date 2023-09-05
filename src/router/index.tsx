@@ -1,7 +1,6 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import { useRoutes, type RouteObject, useNavigate } from 'react-router-dom';
 import Layout from '@/Layout';
-import AppPage from '@/styles/app';
 import { LoadingElementWrapper } from '@/components';
 
 const Home = lazy(
@@ -46,10 +45,6 @@ const routeConfig: RouteObject[] = [
 
 const AppRouter = () => {
   const element = useRoutes(routeConfig);
-  return (
-    <Suspense fallback={LoadingElementWrapper}>
-      <AppPage>{element}</AppPage>
-    </Suspense>
-  );
+  return <Suspense fallback={LoadingElementWrapper}>{element}</Suspense>;
 };
 export default AppRouter;
