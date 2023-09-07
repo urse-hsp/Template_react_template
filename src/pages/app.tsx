@@ -9,7 +9,7 @@ interface IndexType {
   onClose?: () => any;
 }
 
-export const themeColor = 'red';
+export const themeColor = '#006FC4';
 
 const Index: React.FC<IndexType> = (props) => {
   const { i18n } = useTranslation();
