@@ -9,7 +9,6 @@ import { message } from 'antd';
 
 const BASE_URL: string = config.BASE_URL;
 
-const LOCATION_ID = config.LOCATION_ID;
 interface fetcherDataProps extends urlProps {
   data?: dataType<any>;
   header?: dataType<any>;
@@ -38,15 +37,12 @@ const setGetPath = (url: string, data: fetcherDataProps | null | undefined) => {
 
 // useTriggerRequest模式
 export const useFetcher: any = (isTrigger = false) => {
-  // const network_id = useGetLocationId();
   const fn = async (args: fetcherDataProps, arg: dataType<any>) => {
     // const data = JSON.parse(localStorage(APPUSERCONFIGSTATE) ?? '{}');
 
     // fetch请求参数
     const header: any = {
       // Authorization: NFT_STORAGE_APIKEY,
-      Sign: '1',
-      Location: LOCATION_ID,
       // Token: data[SIGNER_TOKEN],
       ...args.header,
     };

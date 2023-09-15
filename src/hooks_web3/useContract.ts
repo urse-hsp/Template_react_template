@@ -18,7 +18,7 @@ export { useErcContract, useTokenContract };
 //   const { contracts } = useWeb3Provider();
 //   const contractsData: any = contracts;
 //   return useContract(
-//     contractsData?.[config.SOCIAL_CONTRACTS_KEY],
+//     '',
 //     Social_ABI,
 //     true,
 //   );
