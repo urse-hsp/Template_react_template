@@ -18,8 +18,7 @@
     ],
     "infoURL": "https://ethereum.org",
     "contracts": {
-      "social": "0x7Dcb967C06d608443CFB06e86548BB94929dD534",
-      "text_social": "0x75d275750b4ab294FdEC1766AA3454c9Fb2C38D7"
+      "social": ""
     },
     "logo": "https://bafybeiapwln2tbc6z4lka5ga3llj5cwbaeg3kwr7vasjknutiakxdemmpm.ipfs.dweb.link/12306.png"
   },
@@ -46,9 +45,8 @@
     ],
     "infoURL": "https://www.okex.com/okexchain",
     "contracts": {
-      "social": "0xFDcf8E92c0B898b3bCD028FeA5243a5Ba539480b"
+      "social": ""
     },
-    "location_id": 3,
     "logo": "https://static.oklink.com/cdn/assets/imgs/233/7E3D44D659CE5A9C.png"
   }
 ]

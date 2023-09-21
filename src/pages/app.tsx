@@ -11,7 +11,7 @@ interface IndexType {
 
 export const themeColor = '#006FC4';
 
-const Index: React.FC<IndexType> = (props) => {
+const Index: React.FC<IndexType> = () => {
   const { i18n } = useTranslation();
 
   return (

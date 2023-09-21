@@ -3,11 +3,11 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 const postcss = require('./config/postcss.config');
 const resolve = (dir) => require('path').resolve(__dirname, dir);
-const production = process.env.NODE_ENV === 'production'; // 正式环境
+const production = process.env.REACT_APP_ENV === 'production'; // 正式环境
 
-const plugins_ = [];
+const plugins = [];
 if (production) {
-  plugins_.push(
+  plugins.push(
     new TerserPlugin({
       terserOptions: {
         compress: {
@@ -26,14 +26,13 @@ if (production) {
     }),
   );
 }
-
 module.exports = {
   webpack: {
     alias: {
       '@': resolve('./src'),
       '@package': resolve('./package.json'),
     },
-    plugins: plugins_,
+    plugins,
   },
   style: {
     postcss: {
