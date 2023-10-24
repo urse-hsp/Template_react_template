@@ -1,4 +1,10 @@
 # README
+## GIT
+  项目拉下来了后重新init git的话，
+  使用husky install（npm run prepare）将git hooks的目录指定为.husky/
+  启动git commit校验
+
+
 # 向下兼容（pc-mobile）或向上（mobile-pc）兼容开发模板
 ####  优点
   1. 自动转换 UI框架中的单位。 
