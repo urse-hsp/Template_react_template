@@ -3,7 +3,7 @@
   "version": "0.1.2",
   "private": true,
   "dependencies": {
-    "@infte/components": "^0.0.15",
+    "@infte/components": "^0.0.16",
     "@infte/react-hooks": "^0.0.3",
     "@infte/reset.css": "^0.0.7",
     "@infte/web3modal-react": "^1.0.94",

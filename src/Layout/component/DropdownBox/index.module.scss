@@ -1,0 +1,61 @@
+@import '@/styles/theme.scss';
+@import '@/styles/media.scss';
+@import '@/styles/lay.scss';
+
+@font-face {
+  font-family: 'CabinetGrotesk';
+  src: url('~@/assets/font/CabinetGrotesk-Extrabold.otf');
+}
+
+/* prettier-ignore */
+.dropdownUserBox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  height: 32PX;
+  background-color: $colorSplit;
+  @include borderRadius(18);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -2PX 0px inset;
+  // box-shadow: 0 2PX 0 rgba(0, 0, 0, 0.1);
+  transition: width 1s;
+  color: #474B8D;
+  html[theme-color='light'] & {
+    background: #EFF4F7;
+  }
+  .name {
+    font-family: 'CabinetGrotesk';
+    display: block;
+    margin: 0 8px 0 4px;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    @media screen and (max-width: $sm) {
+     display: none;
+    }
+  }
+
+  &Transparent{
+    background-color: transparent;
+    box-shadow: none;
+    .name{
+      margin-right: 0;
+    }
+  }
+
+  .avatar {
+    height: 100%;
+    border-radius: 50%;
+    border: none;
+  }
+  .avatarBox{
+    height: 100%;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #D8D8D8;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,17 @@
+@import '@/styles/theme.scss';
+
+.exitModal {
+  &Btn {
+    border-radius: 40px !important;
+  }
+  &Addres {
+    width: 130px;
+    height: 30px;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $colorBgLayout;
+  }
+}
