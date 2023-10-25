@@ -30,7 +30,7 @@ function Store({ children }: any) {
         chainsList: config.chainsList,
         network_id: config.CHAIN_ID,
         locale: language_Key.toLowerCase() ?? baseLocale.toLowerCase(),
-        wallet_type: config.BASE_WALLET_TYPE,
+        // wallet_type: config.BASE_WALLET_TYPE,
       }}
     >
       <Web3ReactProvider>{children}</Web3ReactProvider>
