@@ -35,27 +35,27 @@ const Leftview = memo(() => {
 const RighrView = memo(() => {
   const { active, account } = useWeb3Provider();
 
-  if (!active && !account) {
-    return <Web3Button />;
-  }
-
   return (
     <Space>
       <Language />
       <ThemeSwitch />
-      <div>
-        {account && (
-          <ExitModal
-            view={
-              <DropdownBox
-                currentUser={{
-                  name: address_formatter(account || ''),
-                }}
-              />
-            }
-          />
-        )}
-      </div>
+      {!active && !account ? (
+        <Web3Button />
+      ) : (
+        <div>
+          {account && (
+            <ExitModal
+              view={
+                <DropdownBox
+                  currentUser={{
+                    name: address_formatter(account || ''),
+                  }}
+                />
+              }
+            />
+          )}
+        </div>
+      )}
     </Space>
   );
 });
