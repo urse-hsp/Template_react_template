@@ -5,7 +5,7 @@ import logo_img from '@/assets/images/logo/logo.png';
 import { useWeb3Provider } from '@/hooks_web3';
 import style from './index.module.scss';
 import { address_formatter } from '@/hooks_web3/utils';
-import share_svg from '@/assets/images/icon/share.svg';
+import share_svg from './icon/share.svg';
 const { Text } = Typography;
 
 interface exitModal extends ModalProps {

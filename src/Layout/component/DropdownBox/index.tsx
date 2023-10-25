@@ -3,9 +3,9 @@ import styles from './index.module.scss';
 import { Avatar, Grid } from 'antd';
 import { Loader } from '@/components';
 import classNames from 'classnames';
-import botton_svg from '@/assets/images/icon/botton.svg';
-import wallet_svg from '@/assets/images/icon/wallet.svg';
-import wallet_white_svg from '@/assets/images/icon/wallet_white.svg';
+import botton_svg from './icon/botton.svg';
+import wallet_svg from './icon/wallet.svg';
+import wallet_white_svg from './icon/wallet_white.svg';
 import { useTheme } from '@infte/components/dist/ThemeModels';
 const { useBreakpoint } = Grid;
 
