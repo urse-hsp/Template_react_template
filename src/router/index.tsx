@@ -35,11 +35,11 @@ const routeConfig: RouteObject[] = [
         path: '/',
         element: <Home />,
       },
-      {
-        path: '/*',
-        element: <Redirect to="/" />,
-      },
     ],
+  },
+  {
+    path: '/*',
+    element: <Redirect to="/" />,
   },
 ];
 
