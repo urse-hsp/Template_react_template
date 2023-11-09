@@ -2,11 +2,6 @@
 @import '@/styles/media.scss';
 @import '@/styles/lay.scss';
 
-@font-face {
-  font-family: 'CabinetGrotesk';
-  src: url('~@/assets/font/CabinetGrotesk-Extrabold.otf');
-}
-
 /* prettier-ignore */
 .dropdownUserBox {
   display: flex;
@@ -25,7 +20,6 @@
     background: #EFF4F7;
   }
   .name {
-    font-family: 'CabinetGrotesk';
     display: block;
     margin: 0 8px 0 4px;
     font-size: 16px;
