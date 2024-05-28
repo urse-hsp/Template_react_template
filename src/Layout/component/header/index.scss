@@ -5,14 +5,15 @@
   overflow: hidden;
   width: 100%;
   border-bottom: 1px solid $colorBorder; //#E7E7E7;
-  padding: 0 10px;
   background-color: $colorBgBase;
   position: relative;
   height: 100px;
-
+  display: flex;
+  justify-content: center;
   &-main {
     height: 100%;
     @include appLayoutWrap();
+    margin: 0;
     position: relative;
     transition: top 0.2s ease 0s;
     z-index: 20;

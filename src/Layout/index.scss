@@ -1,12 +1,18 @@
 @import '@/styles/media.scss';
 
+$maxWidth: 1378px; //app最大宽度
+$mainWidth: 1378px; //内容宽度
 @mixin appLayoutWrap($numRow: 100%) {
   width: 100%;
-  max-width: 1378px;
+  max-width: $maxWidth;
   margin: auto;
+  // 页面
+  @media screen and (max-width: ($maxWidth+20px)) {
+    padding: 0 10px;
+  }
 }
 @mixin pageWrap($numRow: 100%) {
-  max-width: 1150px;
+  max-width: $mainWidth;
   margin: 0 auto;
 }
 
