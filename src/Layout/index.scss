@@ -8,7 +8,8 @@ $mainWidth: 1378px; //内容宽度
   margin: auto;
   // 页面
   @media screen and (max-width: ($maxWidth+20px)) {
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 @mixin pageWrap($numRow: 100%) {
