@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { ThemeConfigProvider } from '@infte/components';
 import Router from '@/router';
 import { resources } from '@/locales';
@@ -7,6 +7,44 @@ import { useTranslation } from 'react-i18next';
 //   StyleProvider,
 //   legacyLogicalPropertiesTransformer,
 // } from '@ant-design/cssinjs';
+import { type ReactNode } from 'react';
+import { useTheme } from '@infte/components/dist/ThemeModels/useTheme';
+import { theme } from 'antd';
+const { useToken } = theme;
+
+interface AppPageType {
+  children: ReactNode;
+}
+
+// theme
+const Theme: React.FC<AppPageType> = (props) => {
+  const { darkMode: themeType } = useTheme();
+  const { token } = useToken();
+
+  useLayoutEffect(() => {
+    // 创建一个<style>元素
+    const styleElement = document.createElement('style');
+    // 定义CSS规则，包含变量
+    const cssRule = `
+    :root {
+      background-color: ${token.colorBgBase};
+      color: ${token.colorTextBase};
+      --colorBgLayout: ${token.colorBgLayout};
+      --colorBgBase: ${token.colorBgBase};
+      --colorTextBase: ${token.colorTextBase};
+      --colorPrimary: ${token.colorPrimary};
+      --colorBorder: ${token.colorBorder};
+      --colorSplit: ${token.colorSplit};
+      --colorPrimaryBg: ${token.colorPrimaryBg};
+    }`;
+
+    // 将CSS规则添加到<style>元素中
+    styleElement.appendChild(document.createTextNode(cssRule));
+    // 将<style>元素添加到文档头部
+    document.head.appendChild(styleElement);
+  }, [themeType]);
+  return <>{props.children}</>;
+};
 
 interface IndexType {
   isVisible?: boolean;
@@ -52,7 +90,9 @@ const Index: React.FC<IndexType> = () => {
         },
       }}
     >
-      <Router />
+      <Theme>
+        <Router />
+      </Theme>
     </ThemeConfigProvider>
     // </StyleProvider>
   );
