@@ -3,10 +3,10 @@
   "version": "0.1.2",
   "private": true,
   "dependencies": {
-    "@infte/components": "^0.0.22",
+    "@infte/components": "^0.0.23",
     "@infte/react-hooks": "^0.0.3",
     "@infte/reset.css": "^0.0.7",
-    "@infte/web3modal-react": "^1.1.18",
+    "@infte/web3modal-react": "^1.1.22",
     "bignumber.js": "^9.1.1",
     "dayjs": "^1.11.7",
     "i18next": "^22.4.10",
