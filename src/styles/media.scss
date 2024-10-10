@@ -2,10 +2,6 @@
   * 适配
 */
 
-:root {
-  font-size: 16px;
-}
-
 $min: 370px;
 $xs: 480px; // xs	屏幕 < 576px 响应式栅格，可为栅格数或一个包含其他属性的对象
 $sm: 576px; // sm	屏幕 ≥ 576px 响应式栅格，可为栅格数或一个包含其他属性的对象
@@ -13,3 +9,25 @@ $md: 768px; // md	屏幕 ≥ 768px 响应式栅格，可为栅格数或一个包
 $lg: 992px; // lg	屏幕 ≥ 992px 响应式栅格，可为栅格数或一个包含其他属性的对象
 $xl: 1200px; // xl	屏幕 ≥ 1200px 响应式栅格，可为栅格数或一个包含其他属性的对象
 $xxl: 1600px; // xxl	屏幕 ≥ 1600px 响应式栅格，可为栅格数或一个包含其他属性的对象
+
+:root {
+  font-size: 16px;
+  @media screen and (max-width: $xxl) {
+    // font-size: 15px;
+  }
+  @media screen and (max-width: $xl) {
+    // font-size: 14px;
+  }
+  @media screen and (max-width: $lg) {
+    // font-size: 13px;
+  }
+  @media screen and (max-width: $md) {
+    // font-size: 12px;
+  }
+  @media screen and (max-width: $sm) {
+    // font-size: 11px;
+  }
+  @media screen and (max-width: $xs) {
+    // font-size: 10px;
+  }
+}
