@@ -2,9 +2,18 @@ module.exports = [
   require('postcss-flexbugs-fixes'),
   require('postcss-px-to-viewport')({
     unitToConvert: 'px', // 需要转换的单位，默认为"px"
+
+    /**
+     * 纯h5项目 vw viewportWidth根据设计图大小375/750
+     * pc-h5 或 h5-pc rem方案 viewportWidth
+     */
+    // viewportWidth: 375, // 视窗的宽度，对应设计稿的宽度
+    // viewportUnit: 'vw', // 指定需要转换成的视窗单位，建议使用 rem
+    // fontViewportUnit: 'vw', // 字体使用的视口单位
+
+    viewportWidth: 1599.96, // 3751一倍图片宽度为1599.96 / 750两倍图片宽度为3199.92 视窗的宽度，对应设计稿的宽度
     viewportUnit: 'rem', // 指定需要转换成的视窗单位，建议使用rem
     fontViewportUnit: 'rem', // 字体使用的视口单位
-    viewportWidth: 1599.96, // 1599.96/3199.92 视窗的宽度，对应设计稿的宽度
     viewportHeight: 1334, // 视窗的高度，根据375设备的宽度来指定，一般指定667，也可以不配置
     unitPrecision: 13, // 指定`px`转换为视窗单位值的小数位数（很多时候无法整除）
     propList: ['*'], // 能转化为rem的属性列表

@@ -11,23 +11,23 @@ $xl: 1200px; // xl	屏幕 ≥ 1200px 响应式栅格，可为栅格数或一个�
 $xxl: 1600px; // xxl	屏幕 ≥ 1600px 响应式栅格，可为栅格数或一个包含其他属性的对象
 
 :root {
-  font-size: 16px;
-  @media screen and (max-width: $xxl) {
-    // font-size: 15px;
-  }
-  @media screen and (max-width: $xl) {
-    // font-size: 14px;
-  }
-  @media screen and (max-width: $lg) {
-    // font-size: 13px;
-  }
-  @media screen and (max-width: $md) {
-    // font-size: 12px;
-  }
-  @media screen and (max-width: $sm) {
-    // font-size: 11px;
-  }
-  @media screen and (max-width: $xs) {
-    // font-size: 10px;
-  }
+  font-size: 16px; // 默认16px, 重新赋值设置跟元素的字体大小，根据插件自动适配
+  // @media screen and (max-width: $xxl) {
+  //   font-size: 15px;
+  // }
+  // @media screen and (max-width: $xl) {
+  //   font-size: 14px;
+  // }
+  // @media screen and (max-width: $lg) {
+  //   font-size: 13px;
+  // }
+  // @media screen and (max-width: $md) {
+  //   font-size: 12px;
+  // }
+  // @media screen and (max-width: $sm) {
+  //   font-size: 11px;
+  // }
+  // @media screen and (max-width: $xs) {
+  //   font-size: 10px;
+  // }
 }
